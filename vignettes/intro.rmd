@@ -61,7 +61,7 @@ shortest Euclidean distance. Allspice produces both numerical and visual
 output of the classification results and flags samples with mixed features
 from multiple classes or atypical values.
 
-**Citation:** Citation will be added as soon as pre-print becomes public.
+**Citation:**  Ville-Petteri Mäkinen, Jacqueline Rehn, James Breen, David Yeung, Deborah L White (2022) Multi-cohort transcriptomic subtyping of B-cell acute lymphoblastic leukemia, medRxiv, https://doi.org/10.1101/2022.02.17.22270919.
 
 ***
 

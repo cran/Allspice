@@ -1,4 +1,4 @@
-db70d8ccb3291020fe7e6bc40ac5da7a *DESCRIPTION
+2e0d3e84794323b9a36e6db4953c6952 *DESCRIPTION
 9c22d1f7b3f72fe5bf264389b5c3ab57 *NAMESPACE
 3ed5101e03bcdd74604cb3c1a4864cc8 *R/Asset.R
 eee83191c0798e707b7c4186973894e0 *R/Asset.assemble.R
@@ -28,9 +28,10 @@ d957423d9ba03393ffe9719199cade5a *R/local.regress.R
 83d9167850d83b1385518fa9cc4a3730 *R/local.summarize.R
 8ed46caa869f59c265f105e35b2e2fa4 *R/local.translate.R
 e46633c0ed28e682a8118b1a88bd9b31 *build/vignette.rds
+1e9ddd019bdc72d02704cfd56c99326c *inst/CITATION
 7dff952817c419786a9a7f2c1e3a70ac *inst/doc/intro.R
-04dbf0e9d3583669b8d535db6a069d99 *inst/doc/intro.html
-2169ac1b963877534039cea1b0e0187b *inst/doc/intro.rmd
+b9aa681aba1ac8d2bd20604bb4ded121 *inst/doc/intro.html
+5e990da17806e50a12bcb64b07614fca *inst/doc/intro.rmd
 db17ca22136d44ddbf31e34304701857 *inst/drivers/categories.txt
 49c3f10c7551d95139faec2bfac097f5 *inst/drivers/centroids.txt
 afe6a47d53dd388b1b13302d4c666e08 *inst/drivers/coefficients.txt
@@ -72,4 +73,4 @@ a8cc989f79408f1820adc52771d1c3ed *man/Classifier.information.Rd
 60caaff933997ef4016d3167814f4fbc *man/Classifier.report.Rd
 657c9f77a56a16f1d14fcdf635dddad4 *man/Classifier.scores.Rd
 ee5f84d59ba9212bf90e0101a02cb979 *man/bcellALL.Rd
-2169ac1b963877534039cea1b0e0187b *vignettes/intro.rmd
+5e990da17806e50a12bcb64b07614fca *vignettes/intro.rmd
