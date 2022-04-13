@@ -1,4 +1,4 @@
-2e0d3e84794323b9a36e6db4953c6952 *DESCRIPTION
+e2679297bacf289ac48c4aa95b8b035d *DESCRIPTION
 9c22d1f7b3f72fe5bf264389b5c3ab57 *NAMESPACE
 3ed5101e03bcdd74604cb3c1a4864cc8 *R/Asset.R
 eee83191c0798e707b7c4186973894e0 *R/Asset.assemble.R
@@ -27,12 +27,12 @@ d957423d9ba03393ffe9719199cade5a *R/local.regress.R
 1d10618d4044c041a7e881f51bb55b48 *R/local.statistics.R
 83d9167850d83b1385518fa9cc4a3730 *R/local.summarize.R
 8ed46caa869f59c265f105e35b2e2fa4 *R/local.translate.R
-e46633c0ed28e682a8118b1a88bd9b31 *build/vignette.rds
+74c61dde690557866df8453294119495 *build/vignette.rds
 1e9ddd019bdc72d02704cfd56c99326c *inst/CITATION
 7dff952817c419786a9a7f2c1e3a70ac *inst/doc/intro.R
-b9aa681aba1ac8d2bd20604bb4ded121 *inst/doc/intro.html
+79462268242febaddfcfd8c2af069521 *inst/doc/intro.html
 5e990da17806e50a12bcb64b07614fca *inst/doc/intro.rmd
-db17ca22136d44ddbf31e34304701857 *inst/drivers/categories.txt
+70d4bae2c985d98e16012eea2456b451 *inst/drivers/categories.txt
 49c3f10c7551d95139faec2bfac097f5 *inst/drivers/centroids.txt
 afe6a47d53dd388b1b13302d4c666e08 *inst/drivers/coefficients.txt
 baba413040ff687ed93d25b30e8e12a9 *inst/drivers/configuration.txt
@@ -43,7 +43,7 @@ edd8ad7813b884f2c9bea39bebd4b8e1 *inst/drivers/reference.txt
 bfb8b8768c1ff944c4fbe63faf228bd0 *inst/simulation/centroids.txt
 44cc9d4ca8b8fb6b4f75597b0edaa37b *inst/simulation/covariates.txt
 0bc91bcb3ee11ff734a7f2471a9551fb *inst/simulation/statistics.txt
-dcd8a6896f9bec9229362491b175ec57 *inst/subtypes/categories.txt
+3e4392c15e08db635ed138d7bd9d87b1 *inst/subtypes/categories.txt
 6c317a7e77351719fdff1f3d3f6b3d95 *inst/subtypes/centroids.txt
 5e5f83380cb76adcd23115d060b16809 *inst/subtypes/coefficients.txt
 66af565393c03fb458148388db6cf56e *inst/subtypes/configuration.txt
