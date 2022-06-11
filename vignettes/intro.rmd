@@ -61,9 +61,7 @@ shortest Euclidean distance. Allspice produces both numerical and visual
 output of the classification results and flags samples with mixed features
 from multiple classes or atypical values.
 
-**Citation:**  Ville-Petteri Mäkinen, Jacqueline Rehn, James Breen, David Yeung, Deborah L White (2022) Multi-cohort transcriptomic subtyping of B-cell acute lymphoblastic leukemia, medRxiv, https://doi.org/10.1101/2022.02.17.22270919.
-
-***
+**Citation:**  Ville-Petteri Mäkinen, Jacqueline Rehn, James Breen, David Yeung, Deborah L White (2022) Multi-cohort transcriptomic subtyping of B-cell acute lymphoblastic leukemia, Int J Mol Sci 2022, 23(9), 4574, https://doi.org/10.3390/ijms23094574 
 
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -2898,13 +2896,6 @@ opt <- options(digits=3)
 set.seed(1)
 ```
 
-***
-
-
----
-###########################################################################
----
-
 # Getting started
 
 You can install Allspice using the standard procedure:
@@ -2939,9 +2930,6 @@ fn <- system.file("examples.R", package = "Allspice")
 source(fn)
 ```
 
----
-###########################################################################
----
 
 # Dataset
 
@@ -2964,9 +2952,6 @@ The read counts must be stored in a matrix that has the samples organized
 into columns and the genes are listed as rows. For the meta-data, patients
 can be listed in rows as that is more convenient in most situations.
 
----
-###########################################################################
----
 
 # Classify samples {.tabset}
 
@@ -3143,9 +3128,6 @@ print(primary[rows[1],c("LABEL","MATCH","FREQ","PROX","EXCL")])
 report(cls, name = rows[1], file = NULL)
 ```
 
----
-###########################################################################
----
 
 # Train new classifier {.tabset}
 
@@ -3510,9 +3492,6 @@ print(dat[1:5,])
 cat(nrow(dat), " genes\n", sep="")
 ```
 
----
-###########################################################################
----
 
 # Build information
 
