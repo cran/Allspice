@@ -15,6 +15,10 @@ function(
     dat <- makematrix(dat)
     if(is.character(dat)) stop(dat)
 
+    # Normalize and standardize profiles.
+    dat <- normalize(obj, dat=dat)
+    dat <- standardize(obj, dat=dat, trim=TRUE)
+
     # Select covariates.
     if(length(obj@demographics) > 0) {
 

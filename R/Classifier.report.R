@@ -100,7 +100,7 @@ report_bars <- function(
         if(output$PROX < proxmin) {
             txt <- sprintf("Proximity: %s", percent_label(output$PROX))
  	    txt <- sprintf("%s < %.0f%%", txt, 100*proxmin)
-            text(x=(xcanvas[1] + 0.8*block), y=(ycanvas[2] - 0.55),
+            text(x=(xcanvas[1] + block), y=(ycanvas[2] - 0.55),
                 labels=txt, pos=4, cex=1.0, col="#000000")
         }
 
@@ -109,7 +109,7 @@ report_bars <- function(
         if(output$EXCL < exclmin) {
             txt <- sprintf("Exclusivity: %s", percent_label(output$EXCL))
  	    txt <- sprintf("%s < %.0f%%", txt, 100*exclmin)
-            text(x=(xcanvas[1] + 0.8*block), y=(ycanvas[2] - 1.38),
+            text(x=(xcanvas[1] + block), y=(ycanvas[2] - 1.38),
                 labels=txt, pos=4, cex=1.0, col="#000000")
         }
     }

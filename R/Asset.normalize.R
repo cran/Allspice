@@ -27,7 +27,7 @@ function(
 	if(ndiff > 0) {
             rownames(output) <- keys
 	    if(ndiff < nrow(output)) {
-                msg <- paste0("Asset.normalize() ", ndiff, " / ",
+                msg <- paste0("Asset.normalize(): ", ndiff, " / ",
                     nrow(output), " variables renamed.")
                 warning(msg, call.=FALSE, immediate.=TRUE)
 	    }

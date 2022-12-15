@@ -1,8 +1,7 @@
 \name{profiles<-,Classifier-method}
 \alias{profiles<-,Classifier-method}
-\alias{profiles,Classifier-method}
 \alias{profiles<-}
-\alias{profiles  }
+\alias{profiles}
 
 \title{
 Sample data profiles

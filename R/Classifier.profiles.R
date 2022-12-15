@@ -1,10 +1,3 @@
-# Get normalized RNA profiles.
-setGeneric("profiles", function(obj)
-    standardGeneric("profiles"))
-setMethod("profiles", "Classifier", function(obj) {
-    return(obj@profiles)
-})
-
 # Set RNA profiles.
 setGeneric("profiles<-", function(obj, value)
     standardGeneric("profiles<-"))
@@ -22,16 +15,12 @@ function(
     for(a in names(obj@assets)) {
         ass <- obj@assets[[a]]
 
-        # Normalize and standardize profiles.
-        inputs <- normalize(ass, dat=dat)
-        inputs <- standardize(ass, dat=inputs, trim=TRUE)
-
         # Set default covariates.
 	covars <- NULL
 	if(length(ass@demographics) > 0) {
 	    stats <- ass@demographics
-            covars <- matrix(NA, nrow=ncol(inputs), ncol=nrow(stats))
-	    rownames(covars) <- colnames(inputs)
+            covars <- matrix(NA, nrow=ncol(dat), ncol=nrow(stats))
+	    rownames(covars) <- colnames(dat)
 	    colnames(covars) <- rownames(stats)
             for(j in 1:ncol(covars))
 	        covars[,j] <- stats$MEAN[j] 
@@ -52,7 +41,7 @@ function(
         }
 
         # Assign categories.
-        obj@results[[a]] <- classify(ass, dat=inputs, covariates=covars)
+        obj@results[[a]] <- classify(ass, dat=dat, covariates=covars)
     }
 
     # Check for incomplete covariates.

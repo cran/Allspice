@@ -28,9 +28,9 @@ covariates as columns.
 }
 
 \details{
-The input data must be normalized and standardized the same way as the
-training data for the asset. See \code{\link{normalize}()} and
-\code{\link{standardize}()} for details.
+The input data will be automatically normalized and standardized using
+the internal asset parameters, see \code{\link{configuration}()} for
+details.
 }
 
 \value{
@@ -61,11 +61,7 @@ a <- asset(folder)
 # Simulated data.
 simu <- bcellALL(5)
 
-# Standardize RNA read counts.
-expres <- normalize(a, dat = simu$counts)
-expres <- standardize(a, dat = expres)
-
 # Predict categories.
-res <- classify(a, dat = expres, covariates = simu$metadata)
+res <- classify(a, dat = simu$counts, covariates = simu$metadata)
 print(res[,c("LABEL","PROX","EXCL")])
 }

@@ -19,10 +19,20 @@ function(
     
     # Check data.
     if(length(value$dat) < 1) stop("No data.")
-    dat <- makematrix(value$dat, finite=TRUE)
+    dat <- value$dat; value$dat <- NULL # reduce memory footprint
+    dat <- makematrix(dat, finite=TRUE)
     if(is.character(dat)) {
         warning("Problem with input data.", call.=F, immediate.=T)
         stop(dat)
+    }
+
+    # Select final training features.
+    predictors <- value$predictors
+    if(length(predictors) > 0) {
+        predictors <- intersect(predictors, rownames(dat))
+        if(length(predictors) < length(value$predictors))
+           warning("Missing predictors.", immediate.=T)
+        if(length(predictors) < 3) stop("Too few predictors.")
     }
 
     # Check bitmap.
@@ -75,7 +85,7 @@ function(
     dat <- dat[,keys,drop=FALSE]
     bits <- bits[keys,,drop=FALSE]
     if(length(covars) > 0) covars <- covars[keys,,drop=FALSE]
-    
+
     # Check visuals.
     if(length(obj@categories) < 1) visuals(obj) <- colnames(bits)
     categ <- c(colnames(bits), "Unclassified", "Ambiguous")
@@ -94,6 +104,8 @@ function(
     vars <- translate(dat, obj@naming)
     if(anyDuplicated(vars) > 0)
        stop("Nomenclature caused duplicated row names.")
+    if(length(predictors) > 0)
+        predictors <- vars[match(predictors, rownames(dat))]
     rownames(dat) <- vars
 
     # Population reference.
@@ -116,14 +128,19 @@ function(
     }
 
     # Normalize and standardize training data.
-    dat <- normalize(obj, dat)
-    dat <- standardize(obj, dat)
+    dat <- normalize(obj, dat); gc()
+    dat <- standardize(obj, dat); gc()
 
     # Exclude redundant variables.
-    dat <- prune(dat=dat, bits=bits,
-        nmax=obj@parameters["ninput.max"],
-        rrmax=obj@parameters["rrinput.max"])
-    if(is.character(dat)) stop(dat)
+    if(length(predictors) > 0) {
+        dat <- dat[predictors,,drop=FALSE]
+    }
+    else {
+        dat <- prune(dat=dat, bits=bits,
+            nmax=obj@parameters["ninput.max"],
+            rrmax=obj@parameters["rrinput.max"])
+        if(is.character(dat)) stop(dat)
+    }
 
     # Summarize subset patterns.
     cents <- summarize(dat=dat, bits=bits)
@@ -150,6 +167,8 @@ function(
     obj@coefficients[["freq"]] <- beta
     return(obj)
 })
+
+#-------------------------------------------------------------------------
 
 # Prepare category data.
 make_bits <- function(dat) {

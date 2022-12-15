@@ -63,6 +63,8 @@ from multiple classes or atypical values.
 
 **Citation:**  Ville-Petteri Mäkinen, Jacqueline Rehn, James Breen, David Yeung, Deborah L White (2022) Multi-cohort transcriptomic subtyping of B-cell acute lymphoblastic leukemia, Int J Mol Sci 2022, 23(9), 4574, https://doi.org/10.3390/ijms23094574 
 
+**Resources:**  Additional assets were created from tissue-specific RNA-seq data from the Genotype-Tissue Expression Project v8 [Lonsdale J et al. Nat Genet 45, 580–585 (2013) https://doi.org/10.1038/ng.2653], from lymphoblastoid cell lines [Lappalainen et al. Nature 2013 September 26; 501(7468): 506–511. doi:10.1038/nature12531], from pediatric T-cell leukemia samples [Drobna-Śledzińska et al. ArrayExpress E-MTAB-11759, accessed 2022], and from 11 EPT and 134 T-cell ALL samples (South Australian Health and Medical Research Institute, 2022, unpublished).
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -3395,8 +3397,8 @@ Notice how the predicted categories are different ALL subtypes, but the label
 for every one of them is "B-cell ALL". In the visual report, only the
 supercategory is displayed (see the figures in the section on sample
 classification). The output also shows the second best matching category,
-which in this case is the GTEx whole blood RNA centroid. This is expected,
-since leukemia is a cancer of the blood.
+which in this case is the T-cell ALL RNA centroid. This is expected,
+since it is another similar form of leukemia.
 
 Why would you use labels to define these supercategories? The answer is a
 technical one. You could put all the ALL samples together and calculate

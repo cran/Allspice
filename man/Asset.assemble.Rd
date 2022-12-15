@@ -27,8 +27,8 @@ A list that containts training data, see details.
 
 \details{
 The value argument must contain three named elements: \code{title},
-\code{dat} and \code{bits}. An optional \code{covariates} element
-can also be included.
+\code{dat} and \code{bits}. Optional \code{predictors} and
+\code{covariates} elements can also be included.
 
 The title is a descriptive identifier for the asset that will be
 displayed by the Classifier object in \code{\link{report}()}.
@@ -36,6 +36,10 @@ displayed by the Classifier object in \code{\link{report}()}.
 The \code{dat} element is a matrix that contains the training samples.
 The variables are organized into named rows and the samples into
 named columns. Non-finite values are not allowed.
+
+The \code{predictors} element contains the names of the input variables
+that should be used for training the model. If empty, all inputs are
+used for automatic feature selection and subsequent training steps.
 
 The \code{covariates} element contains additional information for constructing
 the final classification models. Unlike the data matrix, variables
