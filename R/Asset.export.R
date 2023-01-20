@@ -59,8 +59,8 @@ function(
 
     # Save centroids.
     fn <- file.path(folder, "centroids.txt")
-    dat <- data.frame(VAR=rownames(obj@centroids),
-        obj@centroids, stringsAsFactors=FALSE)
+    dat <- data.frame(VAR=rownames(obj@centroids), obj@centroids,
+        check.names=FALSE, stringsAsFactors=FALSE)
     write.table(dat, file=fn, quote=FALSE, row.names=FALSE, sep="\t")
     output[length(output)+1] <- fn
 

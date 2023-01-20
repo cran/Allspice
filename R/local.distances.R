@@ -9,7 +9,7 @@ distances <- function(
     if(length(vars) < nrow(centroids)) return("Incompatible data.")
     else dat <- dat[rownames(centroids),,drop=FALSE]
 
-    # Calculate Euclidean distances.
+   # Calculate Euclidean distances.
     delta <- apply(dat, 2, function(x, centroids) {
         d <- colMeans((centroids - x)^2)
 	return(sqrt(d))

@@ -13,14 +13,15 @@ reference <- function(
     # Remove variables with low or sparse expression.
     dat <- dat[which(freq >= fcutoff),,drop=FALSE]
 
-    # Geometric mean per variable across samples.
-    refvals <- rowMeans(log(dat + 1), na.rm=TRUE)
-    refvals <- (exp(refvals) - 1)
-    refvals <- pmax(refvals, 1e-9)
-    names(refvals) <- rownames(dat)
-
     # Apply logarithm.
     if(cfg["logarithm"]) dat <- log2(dat + 1)
+    
+    # Mean for each variable across samples.
+    refvals <- rowMeans(dat, na.rm=TRUE)
+    names(refvals) <- rownames(dat)
+
+    # Undo logarithm for reference values.
+    if(cfg["logarithm"]) refvals <- (2^refvals - 1)
 
     # Robust descriptive statistics.
     mu <- apply(dat, 1, mean, trim=0.01)

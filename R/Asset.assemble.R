@@ -128,8 +128,8 @@ function(
     }
 
     # Normalize and standardize training data.
-    dat <- normalize(obj, dat); gc()
-    dat <- standardize(obj, dat); gc()
+    dat <- normalize(obj, dat=dat); gc()
+    dat <- standardize(obj, dat=dat); gc()
 
     # Exclude redundant variables.
     if(length(predictors) > 0) {
@@ -196,8 +196,8 @@ make_bits <- function(dat) {
         if(sum(nchar(levs) < 1) > 0) return("Empty category name.")
         dat <- as.integer(dat)
         output <- matrix(0, nrow=length(keys), ncol=length(levs))
-        rownames(output) <- keys
-        colnames(output) <- levs
+        rownames(output) <- as.character(keys)
+        colnames(output) <- as.character(levs)
         for(j in 1:ncol(output))
             output[,j] <- as.integer(dat == j)
     }

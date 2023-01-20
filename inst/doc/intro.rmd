@@ -2947,7 +2947,7 @@ print(simu$metadata[1:6,])
 
 The output contains the unadjusted read counts as would be produced by
 a standard RNA-seq pipeline and patients' sex and age are also simulated.
-Please note that these data are articifial and meant only for demonstration
+Please note that these data are artificial and meant only for demonstration
 purposes; they do not reflect the complex biology of ALL accurately.
 
 The read counts must be stored in a matrix that has the samples organized

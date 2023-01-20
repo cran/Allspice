@@ -90,7 +90,8 @@ import_data <- function(
     output <- NULL
     fpath <- file.path(folder, paste0(fname, ".txt"))
     if(file.exists(fpath)) {
-        output <- read.delim(file=fpath, sep="\t", stringsAsFactors=F)
+        output <- read.delim(file=fpath, sep="\t",
+	    stringsAsFactors=FALSE, check.names=FALSE)
 	nbytes <- prettyNum(file.size(fpath), big.mark=",")
 	msg <- paste0("    ", fname, " -> ", nbytes, " bytes\n")
 	if(verbose) cat(msg)

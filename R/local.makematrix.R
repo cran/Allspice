@@ -21,6 +21,8 @@ makematrix <- function(
     if(ncol(dat)*nrow(dat) < 1) return("Empty matrix.")
     if(length(rownames(dat)) < 1) return("No row names.")
     if(length(colnames(dat)) < 1) return("No column names.")
+    rownames(dat) <- as.character(rownames(dat))
+    colnames(dat) <- as.character(colnames(dat))
 
     # Check for missing values.
     if(finite) {
